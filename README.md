@@ -57,7 +57,8 @@ Reflect on what you’ve done so far. How’s it going? Are you feeling behind/a
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    ** Getting started on the coding for the end and start screens. I don't have the assets yet, but soon then I'll upload.
+    I'm just concerned about the coding the dialouge and buttons for choices, but I feel hopeful about it.
 ```
 
 ---
