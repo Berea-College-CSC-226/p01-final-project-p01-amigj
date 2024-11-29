@@ -10,15 +10,13 @@ from tkinter import PhotoImage
 
 #######################################################################
 # Acknowledgements:
-#
+# T12 teamwork
 #
 #
 ####################################################################################
 
 import pygame, tkinter as tk
 
-
-#create two buttons. Play and Quit
 
 class Start_Screen:
     def __init__(self, windowtext=""):
@@ -45,26 +43,34 @@ class Start_Screen:
         :return:
         """
 
+        self.Button1 = tk.Button(self.root, text=buttontext, command=self.button_handler1)
+        self.Button1.pack
+
+
     def create_button2(self, buttontext="push"):
         """
         Creates the button
         :param buttontext: the quit button that closes the window
         :return:
         """
-
+        self.Button2 = tk.Button(self.root, text=buttontext, command=self.button_handler2)
+        self.Button2.pack
 
     def button_handler1(self):
         """
-
+        Event handler for the start button. This opens game.py
         :return:
         """
+
+        #opens the game.py file
 
     def button_handler2(self):
         """
-
+        Event handler for the quit button. This closes the window
         :return:
         """
 
+        #exits the window
 
 
 def main():
@@ -73,16 +79,12 @@ def main():
     :return:
     """
 
+    menu = Start_Screen("Scott's Cookie Conundrum")
+    menu.Button1("Play")
+    menu.Button2("Quit")
+    menu.root.mainloop()
 
     pass
 
 if __name__ == "__main__":
     main()
-#Play opens game.py
-
-#quit closes window
-
-#visual graphic for title + bkg
-
-
-

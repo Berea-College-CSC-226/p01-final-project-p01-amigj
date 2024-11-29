@@ -18,11 +18,16 @@ import pygame, tkinter
 
 #creates the window
 
+class Game:
+    def __init__(self):
+        """
+
+        """
 
 
 
 
 
 
-
-
+if __name__ == "__main__":
+    main()
