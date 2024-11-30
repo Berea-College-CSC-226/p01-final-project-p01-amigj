@@ -13,7 +13,9 @@
 #
 ####################################################################################
 
-import pygame, tkinter
+import pygame, start_screen, end_screen
+
+from original_code.start_screen import Start_Screen
 
 
 #creates the window
@@ -24,9 +26,22 @@ class Game:
 
         """
 
+    def run(self):
+        """
+
+        :return:
+        """
 
 
+def main():
 
+    """
+
+    """
+    start_game = start_screen.main()
+
+    #game = Game()
+    #game.run()
 
 
 if __name__ == "__main__":

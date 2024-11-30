@@ -14,8 +14,7 @@
 #
 ####################################################################################
 
-import pygame
-
+import pygame, game
 class End_screen:
 
     def end_screen_display(self):

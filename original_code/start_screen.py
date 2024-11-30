@@ -15,7 +15,7 @@ from tkinter import PhotoImage
 #
 ####################################################################################
 
-import pygame, tkinter as tk
+import pygame, game, tkinter as tk
 
 
 class Start_Screen:
@@ -25,8 +25,8 @@ class Start_Screen:
         :param: Name of the window
         """
         self.root = tk.Tk()
-        self.root.minsize(width=600, height=800)
-        self.root.maxsize(width=600, height=800)
+        self.root.minsize(width=800, height=600)
+        self.root.maxsize(width=800, height=600)
         self.root.title(windowtext)
 
         #for background img
@@ -62,6 +62,7 @@ class Start_Screen:
         :return:
         """
 
+
         #opens the game.py file
 
     def button_handler2(self):
@@ -80,11 +81,11 @@ def main():
     """
 
     menu = Start_Screen("Scott's Cookie Conundrum")
-    menu.Button1("Play")
-    menu.Button2("Quit")
+    menu.create_button1("Play")
+    menu.create_button2("Quit")
     menu.root.mainloop()
 
-    pass
+
 
 if __name__ == "__main__":
     main()
