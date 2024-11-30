@@ -4,19 +4,20 @@
 #
 # P01: Final Project
 #
-# Purpose:
+# Purpose: the start screen of the game
 #
-from tkinter import PhotoImage
-
 #######################################################################
 # Acknowledgements:
 # T12 teamwork
+# https://docs.python.org/3/library/tkinter.html
+# ChatGPT
+#
 #
 #
 ####################################################################################
 
-import pygame, game, tkinter as tk
-
+import pygame, game, subprocess, tkinter as ttk
+from tkinter import PhotoImage, Button
 
 class Start_Screen:
     def __init__(self, windowtext=""):
@@ -24,7 +25,7 @@ class Start_Screen:
         Creates the window
         :param: Name of the window
         """
-        self.root = tk.Tk()
+        self.root = ttk.Tk()
         self.root.minsize(width=800, height=600)
         self.root.maxsize(width=800, height=600)
         self.root.title(windowtext)
@@ -43,8 +44,8 @@ class Start_Screen:
         :return:
         """
 
-        self.Button1 = tk.Button(self.root, text=buttontext, command=self.button_handler1)
-        self.Button1.pack
+        self.Button1 = ttk.Button(self.root, text=buttontext, command=self.button_handler1)
+        self.Button1.grid(row=1,column=1)
 
 
     def create_button2(self, buttontext="push"):
@@ -53,25 +54,17 @@ class Start_Screen:
         :param buttontext: the quit button that closes the window
         :return:
         """
-        self.Button2 = tk.Button(self.root, text=buttontext, command=self.button_handler2)
-        self.Button2.pack
+
+        self.Button2 = ttk.Button(self.root, text=buttontext, command=self.root.destroy)
+        self.Button2.grid(row=2, column=1)
 
     def button_handler1(self):
         """
         Event handler for the start button. This opens game.py
         :return:
         """
-
-
+        subprocess.run(["python", "game.py"]) #CBT this just reopens the start menu over and over again
         #opens the game.py file
-
-    def button_handler2(self):
-        """
-        Event handler for the quit button. This closes the window
-        :return:
-        """
-
-        #exits the window
 
 
 def main():
