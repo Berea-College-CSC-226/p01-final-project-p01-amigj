@@ -16,7 +16,10 @@
 #
 ####################################################################################
 
-import pygame, game, subprocess, tkinter as ttk
+#import pygame, game, subprocess, tkinter as ttk
+from tkinter import ttk
+#from game import Game
+from pygame import *
 from tkinter import PhotoImage, Button
 
 class Start_Screen:
@@ -63,7 +66,7 @@ class Start_Screen:
         Event handler for the start button. This opens game.py
         :return:
         """
-        subprocess.run(["python", "game.py"]) #CBT this just reopens the start menu over and over again
+        #subprocess.run(["python", "game.py"]) #CBT this just reopens the start menu over and over again
         #opens the game.py file
 
 
