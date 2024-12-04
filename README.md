@@ -1,20 +1,10 @@
-# ❗CSC226 Final Project
+CSC226 Final Project
 
 ## Instructions
-
-❗️Exclamation Marks ❗️indicate action items; you should remove these emoji as you complete/update the items which 
-  they accompany. (This means that your final README should have no ❗️in it!)
 
 **Author(s)**: Janee Amig
 
 **Google Doc Link**: https://docs.google.com/document/d/1LlmOOMc5_5ZcKUendxeOnrjQex5l9WWuomnUwxlZPDw/edit?tab=t.0#heading=h.qg98s23ap4mh 
-
----
-
-## References 
-Throughout this project, you have likely used outside resources. Reference all ideas which are not your own, 
-and describe how you integrated the ideas or code into your program. This includes online sources, people who have 
-helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update as you go.
 
 ---
 
@@ -25,72 +15,59 @@ helped you, AI tools you've used, and any other resources that are not solely yo
 **Purpose**: ` A working Visual Novel/Choose your own adventure, where you play as Scott and you're trying to
                  find his missing cookies.`
 
-**Source Assignment(s)**: `T01, T04, T11, T12, HW05 `
+**Source Assignment(s)**: `T01, T04, T11, T12, HW05`
 
-**CRC Card(s)**:
-  - Create a CRC card for each class that your project will implement.
-  - See this link for a sample CRC card and a template to use for your own cards (you will have to make a copy to edit):
-    [CRC Card Example](https://docs.google.com/document/d/1JE_3Qmytk_JGztRqkPXWACJwciPH61VCx3idIlBCVFY/edit?usp=sharing)
-  - Tables in markdown are not easy, so we suggest saving your CRC card as an image and including the image(s) in the 
-    README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
-    and REPLACE it with your own:
-  
-[Don't leave me in your README!](image/crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
-
-**Branches**: This project will **require** effective use of git. 
-
-Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
-branch) as they work. When you need to bring each others branches together, do so by merging each other's branches 
-into your own, following the process we've discussed in previous assignments: 
+**Branches**:
 
 ```
     Branch 1 name: amigj
-    Branch 2 name: _____________
 ```
 ---
 
 ## Milestone 2: Code Setup and Issue Queue
-
-Most importantly, keep your issue queue up to date, and focus on your code. 🙃
-
-Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
-What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
     ** Getting started on the coding for the end and start screens. I don't have the assets yet, but soon then I'll upload.
     I'm just concerned about the coding the dialouge and buttons for choices, but I feel hopeful about it.
 ```
 
----
-
 ## Milestone 3: Virtual Check-In
 
 Indicate what percentage of the project you have left to complete and how confident you feel. 
 
-❗️**Completion Percentage**: `0 - 100%`
+**Completion Percentage**: `30%
 
-❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
-  strategies you can employ to increase the likelihood that you'll be successful in completing this project 
-  before the deadline.
+**Confidence**:
 
 ```
-    **Replace this text with your reflection
+   I believe I can get this done by the time of next week. Right now I am behind, and trying to work on the start
+   screen before I start on the actual game code. The game code will be alot because it's going to require story options,
+   buttons, and such.
+   
+   The plan is this:
+   1) start screen [semi-hard]
+   2) game code [hard]
+        2a) dialouge class working
+        2b) character placeholder (box)
+        2c) getting the story written/so dialouge can be implemented
+        2d) button options
+   3) end screen [semi-hard]
+        3a) get the main end screen working
+        3b) optional:win screen
+        3c) optional:lose screen
+   4) character assets impleted to make the program look pretty [easy]
+   
 ```
-
 ---
 
 ## Milestone 4: Final Code, Presentation, Demo
 
+## Delete later: Clean up code, don't forget docstrings, delete unable code/commented code,keep relevent variables
 ### ❗User Instructions
 In a paragraph, explain how to use your program. Assume the user is starting just after they hit the "Run" button 
 in PyCharm. 
 
-### ❗Errors and Constraints
-Every program has bugs or features that had to be scrapped for time. These bugs should be tracked in the issue queue. 
-You should already have a few items in here from the prior weeks. Create a new issue for any undocumented errors and 
-deficiencies that remain in your code. Bugs found that aren't acknowledged in the queue will be penalized.
-
-### ❗Reflection
+### ❗Reflection (what did you learn?)
 In three to four well-written paragraphs, address the following (at a minimum):
 - Why did you select the project that you did?
 - How closely did your final project reflect your initial design?

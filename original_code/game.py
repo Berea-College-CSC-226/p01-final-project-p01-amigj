@@ -11,7 +11,7 @@
 # T011
 # T04
 # T01
-#
+# https://stackoverflow.com/questions/54191913/pygame-window-opens-and-instantly-closes
 #
 #
 #
@@ -30,6 +30,7 @@ class Game:
         """
 
         """
+
         #creates the window
         # game clock/tick
         # game logic creation

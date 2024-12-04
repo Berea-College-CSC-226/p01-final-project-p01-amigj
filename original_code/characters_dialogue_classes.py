@@ -4,15 +4,21 @@
 #
 # P01: Final Project
 #
-# Purpose:
+# Purpose: Classes of dialogue, character model, and choice buttons
 #
 #######################################################################
 # Acknowledgements:
+#https://www.youtube.com/watch?v=Y_ghJY-sW3o
+#https://www.pygame.org/docs/ref/rect.html
+#https://stackoverflow.com/questions/54191913/pygame-window-opens-and-instantly-closes
+#
+#
+#
 #
 #
 #
 ####################################################################################
-from tkinter.font import names
+from tkinter. font import names
 
 
 class Dialogue:
@@ -23,6 +29,12 @@ class Dialogue:
 
         self.name = name #name of character
         self.text = text #should be a string
+
+    def rect(self):
+        """
+
+        :return:
+        """
 
         #create two boxes. One large one for text one small one for name
         #the boxes are in a fixed position (bottom center)
@@ -48,6 +60,10 @@ class Characters:
 
 class Option:
     def __init__(self, choice):
+        """
+
+        :param choice:
+        """
         self.choice = choice
 
         #creates the button

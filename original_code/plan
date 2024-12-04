@@ -24,3 +24,24 @@ img assets need to be pngs (in a folder called images)
 character assets (individual name imgs folder)
 backgrounds (bkg img folder)
 extras such a items or props (extras folder)
+----------------------------------------------------------------------------------------
+plot/dialogue options:
+
+
+
+
+-----------------------------------------------------------------------------
+   12/4/24
+   The plan is this:
+   1) start screen [semi-hard]
+   2) game code [hard]
+        2a) dialogue class working
+        2b) character placeholder (box)
+        2c) getting the story written/so dialouge can be implemented
+        2d) button options
+   3) end screen [semi-hard]
+        3a) get the main end screen working
+        3b) optional:win screen
+        3c) optional:lose screen
+   4) character assets impleted to make the program look pretty [easy]
+------------------------------------------------------
