@@ -41,4 +41,4 @@ class End_screen_lose(End_screen):
         #optional:shows the image pf the end screen if lose
         # replace txt with lose txt
 
-End_screen()
+#End_screen()
