@@ -4,7 +4,7 @@
 #
 # P01: Final Project
 #
-# Purpose: the start screen of the game
+# Purpose: the start screen of the game. Play the game by starting here and not the game file
 #
 #######################################################################
 # Acknowledgements:
@@ -45,7 +45,7 @@ class Start_Screen:
         """
         Creates the button
         :param buttontext: the play button that opens the game
-        :return:
+        :return: None
         """
 
         self.Button1 = ttk.Button(self.window, text=buttontext, command=self.button_handler1)
@@ -56,7 +56,7 @@ class Start_Screen:
         """
         Creates the button
         :param buttontext: the quit button that closes the window
-        :return:
+        :return: None
         """
 
         self.Button2 = ttk.Button(self.window, text=buttontext, command=self.window.destroy)
@@ -65,7 +65,7 @@ class Start_Screen:
     def button_handler1(self):
         """
         Event handler for the play button. This opens game.py
-        :return:
+        :return: None
         """
         self.Button1 = True
         if self.Button1:
@@ -76,15 +76,12 @@ class Start_Screen:
 def main():
     """
     Runs the program and creates the window
-    :return:
+    :return: None
     """
-
     menu = Start_Screen("Scott's Cookie Conundrum")
     menu.create_button1("Play")
     menu.create_button2("Quit")
     menu.window.mainloop()
-
-
 
 if __name__ == "__main__":
     main()

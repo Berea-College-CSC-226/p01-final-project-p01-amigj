@@ -22,13 +22,12 @@ from tkinter. font import names
 
 
 class Dialogue:
-    def __init__(self, name, text):
+    def __init__(self, text):
         """
         creates the box
         """
 
-        self.name = name #name of character
-        self.text = text #should be a string
+        self.text = text #should be a string/nts: Name will be apart of the string
 
     def rect(self):
         """
