@@ -136,11 +136,8 @@ class Game:
             if keys[pygame.K_2] or keys[pygame.K_3] or keys[pygame.K_4] or keys[pygame.K_5] or keys[pygame.K_6] or keys[pygame.K_7] or keys[pygame.K_8] or keys[pygame.K_9]:
                 Chara.wrong(self)
 
-
             pygame.display.update()
             self.clock.tick(60)
-
-
 
 def main():
     """
