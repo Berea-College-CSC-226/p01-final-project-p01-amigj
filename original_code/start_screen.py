@@ -87,7 +87,10 @@ def main():
                        "\n"
                        "How to play:\n"
                        "Press '0' or '1'\n"
-                       "on your keyboard to progress the story\n")
+                       "on your keyboard to progress the story.\n"
+                       "If you get end screen,\n"
+                       "just exit and run the program\n"
+                       "to try again.\n")
     menu.window.mainloop()
 
 if __name__ == "__main__":

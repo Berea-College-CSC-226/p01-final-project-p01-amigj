@@ -41,6 +41,7 @@ class Game:
         #counter for key presses
         zero_key_press_counter = 0
         one_key_press_counter = 0
+        six_key_press_counter = 0
 
         #game loop
         while self.running:
@@ -57,14 +58,19 @@ class Game:
                     if keys[pygame.K_1]:
                         one_key_press_counter += 1
 
+                #easter egg/instant win button
+                if event.type == pygame.KEYDOWN:
+                    if keys[pygame.K_6]:
+                        six_key_press_counter += 1
+
             #default screen once the game opens
             Chara.annoyed(self)
             Dialogue_box.box(self)
             Dialogue_box.diag_text(self, "Scott: Oh no... My wizard cookies are missing!")
-            Dialogue_box.diag_text_2(self,"If I don't have them, then my coding powers will be...")
-            Dialogue_box.diag_text_3(self, "I need to hurry and find them!")
+            Dialogue_box.diag_text_2(self,"Scott: If I don't have them, then my coding powers will be...")
+            Dialogue_box.diag_text_3(self, "Scott: I need to hurry and find them!")
             Option_button.box_draw(self)
-            Option_button.choice_text(self, "0) Check the fridge", "1) Call the weasel")
+            Option_button.choice_text(self, "0) Check the fridge", "1) Summon the weasel")
 
             #all the different choices
             if one_key_press_counter == 0 and zero_key_press_counter == 1:
@@ -101,22 +107,30 @@ class Game:
                 Chara.wizzle(self)
                 Dialogue_box.box(self)
                 Dialogue_box.diag_text(self,"Wizzle: You losw whe greaw wiz cookies? Ah poor scott whe wizard.")
-                Dialogue_box.diag_text_2(self, "I will give you more! However, In exchange of your py swaff.")
+                Dialogue_box.diag_text_2(self, "I will give you more! However, in exchange of your py swaff.")
                 Option_button.box_draw(self)
                 Option_button.choice_text(self, "0) Fine...", "1) Never!")
 
             elif one_key_press_counter == 2 and zero_key_press_counter == 1:
                 Chara.end(self)
                 Dialogue_box.box(self)
-                Dialogue_box.diag_text(self,"Wizzle: welp. you suffer when... ")
+                Dialogue_box.diag_text(self,"Wizzle: Welp. You suffer when... ")
                 Dialogue_box.diag_text_2(self, "You Lose. You made Wizzle upset.")
 
             elif one_key_press_counter == 1 and zero_key_press_counter == 2:
                 Chara.win(self)
                 Dialogue_box.box(self)
                 Dialogue_box.diag_text(self, "Wizzle: Wee Hee! Here are whe precious wiz cookies!")
-                Dialogue_box.diag_text_2(self, "You win! Hooray!")
+                Dialogue_box.diag_text_2(self, "Scott: You're the best Wiz! I'll call back next year.")
+                Dialogue_box.diag_text_3(self, "You win! Hooray!")
 
+            #instant win/easter egg
+            elif one_key_press_counter >= 10 or six_key_press_counter >= 1:
+                Chara.win(self)
+                Chara.cookie(self)
+                Dialogue_box.box(self)
+                Dialogue_box.diag_text(self, "You found the magic button to give Scott his cookies!")
+                Dialogue_box.diag_text_2(self, "You win! By easter egg find! Now Scott won't starve!")
             pygame.display.update()
             self.clock.tick(60)
 
