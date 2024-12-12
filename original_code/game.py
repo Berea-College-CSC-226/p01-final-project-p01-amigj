@@ -125,14 +125,22 @@ class Game:
                 Dialogue_box.diag_text_3(self, "You win! Hooray!")
 
             #instant win/easter egg
-            elif one_key_press_counter >= 10 or six_key_press_counter >= 1:
+            if one_key_press_counter >= 10 or six_key_press_counter >= 3:
                 Chara.win(self)
                 Chara.cookie(self)
                 Dialogue_box.box(self)
                 Dialogue_box.diag_text(self, "You found the magic button to give Scott his cookies!")
                 Dialogue_box.diag_text_2(self, "You win! By easter egg find! Now Scott won't starve!")
+
+            #wrong key press on number pad
+            if keys[pygame.K_2] or keys[pygame.K_3] or keys[pygame.K_4] or keys[pygame.K_5] or keys[pygame.K_6] or keys[pygame.K_7] or keys[pygame.K_8] or keys[pygame.K_9]:
+                Chara.wrong(self)
+
+
             pygame.display.update()
             self.clock.tick(60)
+
+
 
 def main():
     """

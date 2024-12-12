@@ -95,3 +95,5 @@ I know for sure this game code isn't the best. One problem is the key press coun
 If either 0 or 1 get pressed more than 3 times, then the game goes back to the default game screen. It's a 
 bug, but it's too late to fix now. If I were to go back, I would fix the counter system or rework it to make
 it better.
+
+Plus colors were chosen to be colorblind friendly: https://davidmathlogic.com/colorblind/#%23000000-%23E69F00-%2356B4E9-%23009E73-%23F0E442-%230072B2-%23D55E00-%23CC79A7

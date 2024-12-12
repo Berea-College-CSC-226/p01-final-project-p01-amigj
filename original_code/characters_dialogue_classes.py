@@ -120,6 +120,14 @@ class Chara:
         hap = pygame.image.load("happyhappyhappy.png")
         win_screen = self.wn.blit(hap, (0,0))
 
+    def wrong(self):
+        """
+        Wrong input image
+        :return: None
+        """
+        wro = pygame.image.load("wronginput.png")
+        wrong_input = self.wn.blit(wro, (0,0))
+
 class Option_button:
     def __init__(self):
         """
