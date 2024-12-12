@@ -11,60 +11,114 @@
 #https://www.youtube.com/watch?v=Y_ghJY-sW3o
 #https://www.pygame.org/docs/ref/rect.html
 #https://stackoverflow.com/questions/54191913/pygame-window-opens-and-instantly-closes
-#
-#test
+#https://www.youtube.com/watch?v=G8MYGDf_9ho
 #
 #
 #
 #
 ####################################################################################
-from tkinter. font import names
+import pygame
+import game
 
 
-class Dialogue:
-    def __init__(self, text):
+
+class Dialogue_box:
+    def __init__(self):
         """
         creates the box
         """
+#come back and fix doc strings
 
-        self.text = text #should be a string/nts: Name will be apart of the string
-
-    def rect(self):
+    def box(self):
         """
 
         :return:
         """
+        box = pygame.Surface((800, 200))
+        box_rect = box.get_rect(midbottom = (400, 600))
+        self.wn.blit(box, box_rect)
 
-        #create two boxes. One large one for text one small one for name
-        #the boxes are in a fixed position (bottom center)
-        #bkg color will always be white
-        #register on click
+    def diag_text(self, text):
+        """
+
+        :param text: Takes any custom string for dialouge
+        :return:
+        """
+        diag_text_font = pygame.font.Font(None, 25)
+        diag_text_surface = diag_text_font.render(text, True, "Red")
+        diag_text_surface_rect = diag_text_surface.get_rect(midbottom=(400, 428))
+        self.wn.blit(diag_text_surface, diag_text_surface_rect)
 
 
-
-class Characters:
+class Chara:
     def __init__(self):
         """
         creates the characters
         """
+#add doc strings later/ this one is done
+    def neutral(self):
+        neut = pygame.image.load("neutral.png")
+        neutral_scott = self.wn.blit(neut, (0,0))
 
-        #box for charcater as placeholder
-        # (the parameter should take character img/convert img into a easy variable like:
-        # neutral_scott = unititled14.png
-        # happy_scott = untitled23.png etc.....)
+    def annoyed(self):
+        anno = pygame.image.load("annoyed.png")
+        annoyed_scott = self.wn.blit(anno, (0, 0))
 
-        #blue box for scott
-        #orange box for wiz
-        #purple box for wilborne (do ask her)
+    def wizzle(self):
+        wizz = pygame.image.load("wizzletheweasalwizard.png")
+        wizzle = self.wn.blit(wizz, (0, 0))
 
-class Option:
-    def __init__(self, choice):
+    def cookie(self):
+        cook = pygame.image.load("wizcookies.png")
+        cookie = self.wn.blit(cook, (0, 0))
+
+
+class Option_button:
+    def __init__(self):
         """
 
-        :param choice:
         """
-        self.choice = choice
+        self.choice1_box = None
+        self.choice2_box = None
 
-        #creates the button
-        #choice is a string that can have text input
-        #register click
+
+    def box_draw(self):
+        """
+        Creates the boxes for choices 1 and 2. Choice 1 is the top box and Choice 2 is the bottom box
+        :return:
+        """
+
+        self.choice1_box = pygame.Surface((600, 50))
+        self.choice2_box = pygame.Surface((600, 50))
+
+        self.choice1_box_rect = self.choice1_box.get_rect(midbottom = (400, 540))
+        self.choice2_box_rect = self.choice2_box.get_rect(midbottom = (400, 600))
+
+        self.choice1_box.fill("Blue")
+        self.choice2_box.fill("Blue")
+
+        self.wn.blit(self.choice1_box, self.choice1_box_rect)
+        self.wn.blit(self.choice2_box, self.choice2_box_rect)
+
+
+
+    def choice_text(self, choice1, choice2):
+        '''
+
+        :param choice1:
+        :param choice2:
+        :return:
+        '''
+
+        #for choice 1
+        text_font = pygame.font.Font(None, 30)
+        text_surface = text_font.render(choice1, True, "Black")
+        text_surface_rect = text_surface.get_rect(midbottom=(400, 530))
+        self.wn.blit(text_surface, text_surface_rect)
+
+        #for choice 2
+        text2_font = pygame.font.Font(None, 30)
+        text2_surface = text2_font.render(choice2, True, "Black")
+        text2_surface_rect = text2_surface.get_rect(midbottom=(400, 600))
+        self.wn.blit(text2_surface, text2_surface_rect)
+

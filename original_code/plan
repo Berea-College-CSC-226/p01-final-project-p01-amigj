@@ -45,3 +45,43 @@ plot/dialogue options:
         3c) optional:lose screen
    4) character assets impleted to make the program look pretty [easy]
 ------------------------------------------------------
+
+From trial run file:
+
+
+import pygame
+from sys import exit
+pygame.init()
+screen = pygame.display.set_mode((800,600))
+clock = pygame.time.Clock()
+
+
+
+def box_text(text):
+    test_font = pygame.font.Font(None, 50)
+    text_surface = test_font.render(text, True, "Red")
+    text_surface_rect = text_surface.get_rect(midbottom = (400, 450))
+    screen.blit(text_surface, text_surface_rect)
+
+txt = pygame.font.Font(None, 50)
+txt_surface = txt.render("hello there friends. I like to commit murder. It's fun and tasty", True, "Yellow")
+
+s = pygame.Surface((800,200))
+s.fill('black')
+s_rect = s.get_rect(midbottom = (400,600)) #gets a surface (s) and draws a rectangle around it. Makes it more precise to place. It's like an archor point
+chara = pygame.image.load("test_scott.png")
+
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.QUIT
+            exit()
+
+    screen.blit(chara,(0,0))
+    screen.blit(s, s_rect)
+    screen.blit (txt_surface, (0,0))
+    box_text("Hello World \n"
+             "I am Obama")
+    pygame.display.update()
+    clock.tick(60)
