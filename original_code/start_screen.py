@@ -11,17 +11,11 @@
 # T12 teamwork
 # https://docs.python.org/3/library/tkinter.html
 # ChatGPT
-#
-#
-#
 ####################################################################################
-
 import tkinter as tk
 from tkinter import ttk
 from game import *
 import subprocess
-
-#from tkinter import PhotoImage, Button
 
 class Start_Screen:
     def __init__(self, windowtext=""):

@@ -13,18 +13,11 @@
 # T01
 # https://stackoverflow.com/questions/54191913/pygame-window-opens-and-instantly-closes
 # https://www.pygame.org/docs/ref/key.html
-#
-#
-
+#https://www.youtube.com/watch?v=Hujzny-gkEk
+# ChatGPT
 ####################################################################################
-
 import pygame
-import start_screen
-import end_screen
-from sys import exit
 from characters_dialogue_classes import *
-from original_code.characters_dialogue_classes import Option_button
-
 
 class Game:
     def __init__(self):
@@ -39,80 +32,101 @@ class Game:
         self.title = pygame.display.set_caption("Scott's Cookie Conundrum")
         self.running = True
         self.clock = pygame.time.Clock()
-        #maybe objects for characters like T11
-            #self.scott = character-class/ig?(self.wn_size)
-            #self.wizzle
-            #self.wilborne
-        #self.display = pygame.display.update()
-
-
-        # game logic creation
-
-    def box_text(self, text):
-
-        text_font = pygame.font.Font(None, 50)
-        text_surface = text_font.render(text, True, "Red")
-        text_surface_rect = text_surface.get_rect(midbottom=(400, 450))
-        self.wn.blit(text_surface, text_surface_rect)
-        #delete later this is a test/back up if things go wrong
 
     def run(self):
         """
-
-        :return:
+        The whole game loop with dialogue choices with key presses.
+        :return: None
         """
+        #counter for key presses
+        zero_key_press_counter = 0
+        one_key_press_counter = 0
+
         #game loop
         while self.running:
-
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
+                keys = pygame.key.get_pressed()
 
-            #self.box_text("hello")
-            #register keyboad presses for options
-            pygame.k
+                #keeps track of counter number
+                if event.type == pygame.KEYDOWN:
+                    if keys[pygame.K_0]:
+                        zero_key_press_counter += 1
+                if event.type == pygame.KEYDOWN:
+                    if keys[pygame.K_1]:
+                        one_key_press_counter += 1
 
+            #default screen once the game opens
             Chara.annoyed(self)
             Dialogue_box.box(self)
-            Dialogue_box.diag_text(self, "Great scott Marty")
+            Dialogue_box.diag_text(self, "Scott: Oh no... My wizard cookies are missing!")
+            Dialogue_box.diag_text_2(self,"If I don't have them, then my coding powers will be...")
+            Dialogue_box.diag_text_3(self, "I need to hurry and find them!")
             Option_button.box_draw(self)
-            Option_button.choice_text(self, "hello", "bye")
+            Option_button.choice_text(self, "0) Check the fridge", "1) Call the weasel")
 
+            #all the different choices
+            if one_key_press_counter == 0 and zero_key_press_counter == 1:
+                Chara.neutral(self)
+                Dialogue_box.box(self)
+                Dialogue_box.diag_text(self,"The cookies are not in the fridge.")
+                Dialogue_box.diag_text_2(self,"Only a sad peanut butter and jelly sandwich that robot Scott 2.0 tried to make.")
+                Option_button.box_draw(self)
+                Option_button.choice_text(self,"0) Eat the sandwich", "1) Accept your fate (Doesn't work)")
 
+            elif one_key_press_counter == 0 and zero_key_press_counter == 2:
+                Chara.end(self)
+                Dialogue_box.box(self)
+                Dialogue_box.diag_text(self, "The sandwich tasted like a failed attempt at making a sandwich.")
+                Dialogue_box.diag_text_2(self,"It was fine but it wasn't wiz cookies...")
+                Dialogue_box.diag_text_3(self, "You Lose and Scott never got his cookies, but a mediocre sandwich.")
+
+            elif one_key_press_counter == 1 and zero_key_press_counter == 0:
+                Chara.wizzle(self)
+                Dialogue_box.box(self)
+                Dialogue_box.diag_text(self, "You call the only wizard who knows how to fix this.")
+                Dialogue_box.diag_text_2(self, "Wizzle: Wis I, Wizzle whe weasel wizard. How can I help whee?")
+                Option_button.box_draw(self)
+                Option_button.choice_text(self, "0) I lose the cookies", "1) Nevermind")
+
+            elif one_key_press_counter == 2 and zero_key_press_counter == 0:
+                Chara.end(self)
+                Dialogue_box.box(self)
+                Dialogue_box.diag_text(self, "Nevermind... The social anxiety was too much.")
+                Dialogue_box.diag_text_2(self, "You'll be fine without the cookies. Without the powers.")
+                Dialogue_box.diag_text_3(self, "You Lose. You're now a farmer helping Dan with his radish farm.")
+
+            elif one_key_press_counter == 1 and zero_key_press_counter == 1:
+                Chara.wizzle(self)
+                Dialogue_box.box(self)
+                Dialogue_box.diag_text(self,"Wizzle: You losw whe greaw wiz cookies? Ah poor scott whe wizard.")
+                Dialogue_box.diag_text_2(self, "I will give you more! However, In exchange of your py swaff.")
+                Option_button.box_draw(self)
+                Option_button.choice_text(self, "0) Fine...", "1) Never!")
+
+            elif one_key_press_counter == 2 and zero_key_press_counter == 1:
+                Chara.end(self)
+                Dialogue_box.box(self)
+                Dialogue_box.diag_text(self,"Wizzle: welp. you suffer when... ")
+                Dialogue_box.diag_text_2(self, "You Lose. You made Wizzle upset.")
+
+            elif one_key_press_counter == 1 and zero_key_press_counter == 2:
+                Chara.win(self)
+                Dialogue_box.box(self)
+                Dialogue_box.diag_text(self, "Wizzle: Wee Hee! Here are whe precious wiz cookies!")
+                Dialogue_box.diag_text_2(self, "You win! Hooray!")
 
             pygame.display.update()
             self.clock.tick(60)
-
-
-
-        #runs the game. first opens with start screen call
-        #after start screen then story construction
-
-        #dialouge class call for box and character call.
-
-
-
-    def if_fail(self,succeed):
-        '''
-
-        :param succeed:
-        :return:
-        '''
-        if not succeed:
-            pass
-#end screen
-
-
 
 def main():
     """
     Runs the game.
     :return: None
     """
-    #start_screen.main()
     game = Game()
     game.run()
-
 
 if __name__ == "__main__":
     main()
