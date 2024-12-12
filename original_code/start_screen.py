@@ -26,8 +26,8 @@ class Start_Screen:
         :return: None
         """
         self.window = tk.Tk()
-        self.window.minsize(width=220, height=300)
-        self.window.maxsize(width=220, height=300)
+        self.window.minsize(width=160, height=300)
+        self.window.maxsize(width=160, height=300)
         self.window.title(windowtext)
         self.button1 = None
         self.button2 = None
@@ -86,8 +86,10 @@ def main():
                        "before it's too late!\n"
                        "\n"
                        "How to play:\n"
+                       "\n"
                        "Press '0' or '1'\n"
-                       "on your keyboard to progress the story.\n"
+                       "on the keyboard number row\n"
+                       " to progress the story.\n"
                        "If you get end screen,\n"
                        "just exit and run the program\n"
                        "to try again.\n")
