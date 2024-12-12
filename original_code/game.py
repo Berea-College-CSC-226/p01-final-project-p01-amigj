@@ -88,7 +88,7 @@ class Game:
                 Dialogue_box.diag_text(self, "You call the only wizard who knows how to fix this.")
                 Dialogue_box.diag_text_2(self, "Wizzle: Wis I, Wizzle whe weasel wizard. How can I help whee?")
                 Option_button.box_draw(self)
-                Option_button.choice_text(self, "0) I lose the cookies", "1) Nevermind")
+                Option_button.choice_text(self, "0) I lost the cookies", "1) Nevermind")
 
             elif one_key_press_counter == 2 and zero_key_press_counter == 0:
                 Chara.end(self)

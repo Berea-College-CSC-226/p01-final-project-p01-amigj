@@ -62,16 +62,36 @@ Indicate what percentage of the project you have left to complete and how confid
 
 ## Milestone 4: Final Code, Presentation, Demo
 
-## Delete later: Clean up code, don't forget docstrings, delete unable code/commented code,keep relevent variables
-### ❗User Instructions
-In a paragraph, explain how to use your program. Assume the user is starting just after they hit the "Run" button 
-in PyCharm. 
+## User Instructions
+The user must start the game via the start_screen.py. After hitting run, the User is given the objective of the game
+and how to play.
 
-### ❗Reflection (what did you learn?)
-In three to four well-written paragraphs, address the following (at a minimum):
-- Why did you select the project that you did?
-- How closely did your final project reflect your initial design?
-- What did you learn from this process?
-- What was the hardest part of the final project?
-- What would you do differently next time, knowing what you know now?
-- (For partners) How well did you work with your partner? What made it go well? What made it challenging?
+## Reflection (what did you learn?)
+To be honest this project's original idea was to ambisous and complicated for my beginner coder brain.
+Plus I did wait until the last minute, but at least it wasn't the last last minute. 
+
+I wanted to do a Visual novel due to my current instrest in looking at the Renpy engine for visual
+novels. I thought it would be a fun process to draw the assets I needed. I had to learn to cut corners
+with the assets by making them simple in style, plus already fitting to the window size when I imported the
+images into my code. (It would of been a pain to translate the x and y of the images if I didn't.)
+The original concept is there but it had to be simpfied due to the remaining time I had. Originally I was
+going to have an end screen class, but deleted it due to time.
+
+I had to watch plenty of videos, read forums, ChatGPT, and look at class resources for help.
+The introdution to pygame video saved me because I didn't know what I was doing trying to make a literal
+box. I enjoyed learning how to get surfaces to work and to layer them was helpful in the end. There
+were times where I had to change my apporach to some ideas: Having the user mouse click a button for a choice,
+but that would be too much code plus reworking code, so a key press instead is one time.
+
+The hardest was the start screen. Then the 2 or 3 hour slump starting the game code and being clueless
+on how to fix the game loop. I overlooked a lot of things and had to skim. If not skim, then have
+chatGPT help me figure out what I missed. I did the majority of the game code and class making
+in one day which is good.
+
+I'm glad that I messed around on a different py project to work things out, because that helped me
+alot to get the coding process down quicker. 
+
+I know for sure this game code isn't the best. One problem is the key press counters dictating the choices.
+If either 0 or 1 get pressed more than 3 times, then the game goes back to the default game screen. It's a 
+bug, but it's too late to fix now. If I were to go back, I would fix the counter system or rework it to make
+it better.
